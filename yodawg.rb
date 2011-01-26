@@ -11,7 +11,10 @@ end
 
 
 get "/" do
-	yodawg("shit")
+	"Here's a little Ruby app I wrote to amuse myself and learn something at the same time. <br /> 
+If you want to play around with it, just add one or two words to the URL. <br />
+If you have two words, separate them with a slash, \"apples/eat\". <br /><br />
+So if you typed in \"yodawg.heroku.com/shit\" you'd get: " + yodawg("shit") + "<br /><br /> And if you typed in \"yodawg.heroku.com/fancy/pants\" you'd get: " + yodawg("fancy", "pants") 
 end
 
 get "/:noun" do |n|
