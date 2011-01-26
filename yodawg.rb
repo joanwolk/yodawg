@@ -17,10 +17,11 @@ If you have two words, separate them with a slash, \"apples/eat\". <br /><br />
 So if you typed in \"yodawg.heroku.com/shit\" you'd get: " + yodawg("shit") + "<br /><br /> And if you typed in \"yodawg.heroku.com/fancy/pants\" you'd get: " + yodawg("fancy", "pants") 
 end
 
-get "/:noun" do |n|
-	yodawg(n)
+get "/:noun/?" do |n|
+	yodawg(n) + "<br /><br /><br /><br /><a href=\"/\">Yo dawg, I heard you liked instructions...</a>"
 end
 
-get "/:noun/:verb" do |n, v|
-	yodawg(n, v)
+get "/:noun/:verb/?" do |n, v|
+	yodawg(n, v) + "<br /><br /><br /><br /><a href=\"/\">Yo dawg, I heard you liked instructions...</a>"
+
 end
